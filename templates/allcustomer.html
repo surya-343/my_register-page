@@ -1,0 +1,87 @@
+{% extends "mytemplate.html" %}
+{% block bodycontent%}
+<style>
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+thead td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+</style>
+
+<div class="food-details">
+            <h1>All Customers</h1>
+        </div>
+
+<table class="content-table">
+    <thead>
+    <tr>
+        <th> <font color="Red"> Customer Name </font></th>
+        <th> <font color="Red"> Customer Email </font></th>
+
+    </tr>
+    {% for each_record in my_data : %}
+    <tr>
+        <td><font color="FFFFFF"> {{each_record[0]}} </font></td>
+        <td><font color="FFFFFF"> {{each_record[2]}} </font></td>
+
+
+    </tr>
+    {% endfor %}
+    </thead>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+Copyright @ 2022 
+</footer>
+
+{% endblock %}

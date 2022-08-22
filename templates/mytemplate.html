@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    <meta charset="UTF-8">
+    <title>New User's</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+     h1 {
+    text-align: center;
+        }
+
+    h1 {
+    text-shadow: 2px 2px 5px white;
+    color:white;
+       }
+
+</style>
+</head>
+<body background="static/images/krupa.jpg" style="background-size: 100%; ">
+<table>
+      <tr>
+        <td>
+          <img src="{{ url_for('static', filename='images/logo.jpg') }}"  width="60">
+        </td>
+        <td>
+          <h1> Wel Come</h1>
+        </td>
+      </tr>
+    </table>
+
+<div class="topnav">
+    <a href="/">Home</a>|
+  
+
+    {% if session.username == 'suresh' : %}
+    
+    <a href="/allcustomer">All Customers</a>|
+    {% endif %}
+
+    {% if session.username == 'foodie' : %}
+
+    
+    {% endif %}
+
+    {% if session.username : %}
+    <a href="/logout">Logout</a>
+    {% else : %}
+    <a href="/newuser"> Register </a>|
+    <a href="/login">Login</a>
+    {% endif %}
+
+
+</div>
+
+
+{% block bodycontent%}
+{% endblock %}
+</body>
+</html>
